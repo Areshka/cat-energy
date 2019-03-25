@@ -1,2 +1,13 @@
 $imgFolder: '../img/'; // путь к изображениям
 $fontsFolder: '../fonts/'; // путь к шрифтам
+
+$colorText: #444444;
+$bgWhite: #ffffff;
+
+$mobileWidthsOnly: "(max-width: 767px)";
+$mobilePads: 20px;
+$tabletWidth: "(min-width: 768px)";
+$tabletPads: 30px;
+$desktopWidth: "(min-width: 1300px)";
+$desktopPads: 40px;
+$retina: "(min-resolution: 144dpi), (min-resolution: 1.5dppx)";
