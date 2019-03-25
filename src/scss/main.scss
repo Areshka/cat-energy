@@ -1,0 +1,8 @@
+// import libs
+@import "../../node_modules/normalize-scss/sass/normalize/import-now";
+
+// import components
+@import "components/vars.scss";
+@import "components/mixins.scss";
+@import "components/fonts.scss";
+@import "components/scaffolding.scss";

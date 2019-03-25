@@ -1,0 +1,28 @@
+@mixin fontFace($family, $src, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $family;
+    // src: url('#{$font-folder+$src}.eot'); // IE9 compat
+    src: // url('#{$font-folder+$src}.eot?#iefix') format('embedded-opentype'), // IE8 and below
+    url('#{$fontsFolder + $src}.woff') format('woff'),
+    url('#{$fontsFolder + $src}.woff2') format('woff2'),
+    url('#{$fontsFolder + $src}.ttf') format('truetype'); // Safari, Android, iOS
+
+    font-style: $style;
+    font-weight: $weight;
+  }
+}
+
+@mixin no-outline() {
+  outline: none;
+  background: transparent;
+
+  &::before {
+    display: none;
+  }
+}
+
+@mixin reset-list-style() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
