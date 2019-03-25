@@ -10,6 +10,47 @@
 </head>
 
 <body>
+  <header class="pageHeader">
+    <div class="pageHeader__wrapper">
+      <a href="index.html" class="paheHeader__logo">
+        <picture>
+          <source media="(min-width: 1300px)" srcset="img/vector/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/vector/logo-tablet.svg">
+          <img class="pageHeader__logoImage" src="img/vector/logo-mobile.svg" width="33" height="38" alt="Cat Energy">
+        </picture>
+        <svg class="icon pageHeader__logoTitle" width="101" height="18">
+          <use xlink:href="#logo-mobile-header"></use>
+        </svg>
+      </a>
+      <nav class="mainNav  mainNav--closed  mainNav--nojs">
+        <button class="mainNav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <ul class="mainNav__list">
+          <li class="mainNav__item"><a>Главная</a></li>
+          <li class="mainNav__item"><a href="catalog.html">Каталог продукции</a></li>
+          <li class="mainNav__item"><a href="form.html">Подбор программы</a></li>
+        </ul>
+      </nav>
+      <section class="jumbotron">
+        <h2 class="jumbotron__title">Функциональное питание для котов</h2>
+        <p class="jumbotron__slogan">Занялся собой? Займись котом!</p>
+        <picture>
+          <source media="(min-width: 1300px)"
+            srcset="img/raster/index-can-desktop@1x.png 1x, img/raster/index-can-desktop@2x.png 2x">
+          <source media="(min-width: 768px)"
+            srcset="img/raster/index-can-tablet@1x.jpg 1x, img/raster/index-can-tablet@2x.jpg 2x">
+          <img class="jumbotron__image" src="img/raster/index-can-mobile@1x.png"
+            srcset="img/raster/index-can-mobile@2x.png 2x" alt="Cat Pro Energy Курица">
+        </picture>
+        <a class="button  jumbotron__button" href="form.html">Подобрать программу</a>
+      </section>
+    </div>
+  </header>
+
+  <div class="display:none">
+    <include src="build/img/vector/sprite.svg"></include>
+  </div>
 
   <script src="js/main.min.js"></script>
 </body>
