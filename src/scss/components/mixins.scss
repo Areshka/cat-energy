@@ -26,3 +26,33 @@
   padding: 0;
   list-style: none;
 }
+
+@mixin container() {
+  width: 320px;
+  margin: 0 auto;
+
+  @media #{unquote($tabletWidth)} {
+    width: 708px;
+  }
+
+  @media #{unquote($desktopWidth)} {
+    width: 1220px;
+  }
+}
+
+@mixin containerFluid() {
+  width: auto;
+  padding: 0 $mobilePads;
+
+  @media #{unquote($tabletWidth)} {
+    width: 92.3%;
+    margin: 0 auto;
+    padding: 0 $tabletPads;
+  }
+
+  @media #{unquote($desktopWidth)} {
+    width: 94%;
+    max-width: 1220px;
+    padding: 0 $desktopPads;
+  }
+}
