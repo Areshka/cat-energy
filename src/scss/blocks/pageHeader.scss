@@ -1,7 +1,6 @@
 .pageHeader__wrapper {
   position: relative;
   @include containerFluid();
-  // background: green;
 }
 
 .paheHeader__logo {
@@ -12,7 +11,6 @@
   padding-top: 11px;
   padding-bottom: 16px;
   transition: opacity .3s ease;
-  // background-color: blue;
 
   &:hover {
     opacity: .7;
@@ -26,7 +24,6 @@
 .pageHeader__logoImage {
   width: 33px;
   height: 38px;
-  // background-color: yellow;
 }
 
 .pageHeader__logoTitle {
@@ -45,7 +42,7 @@
   .pageHeader__wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    // align-items: center
     padding-top: 24px;
   }
 
@@ -67,6 +64,25 @@
 }
 
 @media #{unquote($desktopWidth)} {
+
+  .pageHeader {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
+      width: 50%;
+      min-height: 696px;
+      background-image: url($imgFolder + 'raster/index-background-desktop@1x.jpg');
+      background-color: #63a73a;
+      background-position: 0%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
 
   .pageHeader__wrapper {
     padding-top: 54px;
