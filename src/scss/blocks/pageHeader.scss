@@ -1,7 +1,7 @@
 .pageHeader__wrapper {
   position: relative;
   @include containerFluid();
-  background: green;
+  // background: green;
 }
 
 .paheHeader__logo {
@@ -11,7 +11,16 @@
   width: 192px;
   padding-top: 11px;
   padding-bottom: 16px;
-  background-color: blue;
+  transition: opacity .3s ease;
+  // background-color: blue;
+
+  &:hover {
+    opacity: .7;
+  }
+
+  &:active {
+    opacity: .5;
+  }
 }
 
 .pageHeader__logoImage {
