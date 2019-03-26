@@ -1,0 +1,40 @@
+.button {
+  background-color: $green;
+  display: block;
+  padding: 12px 26px 12px 29px;
+  font-family: $fontOswald;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: normal;
+  color: $white;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-shadow: none;
+  background-color: $green;
+  transition: all .3s ease;
+
+  &:hover {
+    text-decoration: none;
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba($white, .3);
+    text-decoration: none;
+    background-color: #5eaa2f;
+  }
+
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+@media #{unquote($tabletWidth)} {
+
+  .button {
+    padding: 17px 27px 17px 25px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
