@@ -1,5 +1,4 @@
 .mainNav {
-  background-color: #fff;
   width: auto;
 
   &__list {
@@ -83,9 +82,28 @@
 
 @media #{unquote($mobileWidthsOnly)} {
 
+  .mainNav--closed .mainNav__list {
+    display: none;
+  }
+
+  .mainNav--opened .mainNav__list,
+  .mainNav--nojs .mainNav__list {
+    display: block;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  .mainNav--nojs .mainNav__toggle {
+    display: none;
+  }
+
 }
 
 @media #{unquote($tabletWidth)} {
+
+  .mainNav {
+    display: flex;
+  }
 
   .mainNav__toggle {
     display: none;
