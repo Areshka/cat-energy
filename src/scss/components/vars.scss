@@ -1,8 +1,12 @@
 $imgFolder: '../img/'; // путь к изображениям
 $fontsFolder: '../fonts/'; // путь к шрифтам
 
+$white: #ffffff;
 $colorText: #444444;
-$bgWhite: #ffffff;
+$gray-1: #111111;
+$gray-2: #222222;
+
+$bgWhite: $white;
 
 $mobileWidthsOnly: "(max-width: 767px)";
 $mobilePads: 20px;
@@ -11,3 +15,6 @@ $tabletPads: 30px;
 $desktopWidth: "(min-width: 1300px)";
 $desktopPads: 40px;
 $retina: "(min-resolution: 144dpi), (min-resolution: 1.5dppx)";
+
+$fontOswald: 'Oswald', 'Arial', sans-serif;
+$fontArial: 'Arial', sans-serif;
