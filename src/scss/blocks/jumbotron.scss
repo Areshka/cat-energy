@@ -1,0 +1,132 @@
+.jumbotron {
+  @include containerFluid();
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    min-height: 306px;
+    background-image: url($imgFolder + 'raster/index-background-mobile@1x.jpg');
+
+    @media #{unquote($retina)} {
+      background-image: url($imgFolder + 'raster/index-background-mobile@2x.jpg');
+    }
+
+    background-color: #63a73a;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__wrapper {
+    padding-top: 28px;
+    padding-bottom: 22px;
+    font-family: $fontOswald;
+    text-align: center;
+    color: $white;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 28px;
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: normal;
+  }
+
+  &__slogan {
+    margin: 0;
+    margin-bottom: 28px;
+    font-size: 14px;
+    line-height: 14px;
+    text-transform: uppercase;
+  }
+
+  &__image {
+    width: 280px;
+    height: 270px;
+    margin: 0 auto;
+  }
+}
+
+
+@media #{unquote($tabletWidth)} {
+
+  .jumbotron {
+
+    &::after {
+      display: none;
+    }
+
+    &__wrapper {
+      position: relative;
+      padding-top: 58px;
+      padding-bottom: 0;
+      text-align: left;
+      color: $gray-1;
+    }
+
+    &__title {
+      margin-bottom: 46px;
+      padding-left: 85px;
+      font-size: 60px;
+      line-height: 60px;
+    }
+
+    &__slogan {
+      margin-bottom: 23px;
+      padding-left: 85px;
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    &__image {
+      width: 709px;
+      height: 609px;
+    }
+
+    &__button {
+      position: absolute;
+      top: 287px;
+      left: 90px;
+    }
+  }
+}
+
+@media #{unquote($desktopWidth)} {
+
+  .jumbotron {
+
+    &__wrapper {
+      position: relative;
+      padding-top: 111px;
+      padding-left: 90px;
+    }
+
+    &__title,
+    &__slogan {
+      padding-left: 0;
+    }
+
+    &__slogan {
+      margin-bottom: 55px;
+    }
+
+    &__image {
+      position: absolute;
+      top: 25px;
+      left: 450px;
+      width: 552px;
+      height: 499px;
+    }
+
+    &__button {
+      position: static;
+      display: inline-block;
+    }
+  }
+}
