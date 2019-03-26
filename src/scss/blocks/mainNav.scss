@@ -1,0 +1,93 @@
+.mainNav {
+  background-color: #fff;
+  width: auto;
+
+  &__list {
+    @include reset-list-style();
+  }
+}
+
+.mainNav__toggle {
+  position: absolute;
+  top: 23px;
+  right: 20px;
+  z-index: 2;
+  display: block;
+  width: 24px;
+  height: 18px;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.mainNav--closed .mainNav__toggle {
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color: #222222;
+    box-shadow: 0 8px 0 0 #222222, 0 16px 0 0 #222222;
+    transition: all .2s ease;
+  }
+
+  &:hover::before {
+    background-color: rgba(34, 34, 34, .6);
+    box-shadow: 0 8px 0 0 rgba(34, 34, 34, .6), 0 16px 0 0 rgba(34, 34, 34, .6);
+  }
+
+  &:active::before {
+    background-color: rgba(34, 34, 34, .4);
+    box-shadow: 0 8px 0 0 rgba(34, 34, 34, .4), 0 16px 0 0 rgba(34, 34, 34, .4);
+  }
+
+}
+
+.mainNav--opened .mainNav__toggle {
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 2px;
+    width: 20px;
+    height: 2px;
+    background-color: #222222;
+    transition: all .2s ease;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: rgba(34, 34, 34, .6);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: rgba(34, 34, 34, .4);
+  }
+}
+
+@media #{unquote($mobileWidthsOnly)} {
+
+}
+
+@media #{unquote($tabletWidth)} {
+
+  .mainNav__toggle {
+    display: none;
+  }
+}
