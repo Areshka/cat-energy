@@ -13,11 +13,11 @@
   transition: opacity .3s ease;
 
   &:hover {
-    opacity: .7;
+    opacity: .8;
   }
 
   &:active {
-    opacity: .5;
+    opacity: .6;
   }
 }
 
@@ -77,6 +77,11 @@
       width: 50%;
       min-height: 696px;
       background-image: url($imgFolder + 'raster/index-background-desktop@1x.jpg');
+
+      @media #{unquote($retina)} {
+        background-image: url($imgFolder + 'raster/index-background-desktop@2x.jpg');
+      }
+
       background-color: #63a73a;
       background-position: 0%;
       background-repeat: no-repeat;
