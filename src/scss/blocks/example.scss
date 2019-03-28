@@ -1,5 +1,5 @@
 .example {
-  padding-top: 20px;
+  padding-top: 18px;
   padding-bottom: 38px;
   background-color: $gray-light;
 }
@@ -21,10 +21,34 @@
 }
 
 .example__text {
-  margin-bottom: 28px;
+  margin-bottom: 25px;
   font-family: $fontArial;
   font-size: 14px;
   line-height: 18px;
 }
 
+@media #{unquote($tabletWidth)} {
 
+  .example {
+    padding-top: 44px;
+    padding-bottom: 65px;
+    background: none;
+    border-top: 1px solid #e6e6e6;
+  }
+
+  .example__title {
+    margin-bottom: 66px;
+    font-size: 60px;
+  }
+
+  .exemple__info {
+    margin-bottom: 80px;
+  }
+
+  .example__text {
+    margin-bottom: 56px;
+    font-family: $fontArial;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
