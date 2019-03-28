@@ -1,0 +1,30 @@
+.example {
+  padding-top: 20px;
+  padding-bottom: 38px;
+  background-color: $gray-light;
+}
+
+.example__wrapper {
+  @include containerFluid();
+}
+
+.example__title {
+  margin-bottom: 24px;
+  font-family: $fontOswald;
+  font-size: 36px;
+  line-height: 60px;
+  font-weight: normal;
+}
+
+.exemple__info {
+  margin-bottom: 32px;
+}
+
+.example__text {
+  margin-bottom: 28px;
+  font-family: $fontArial;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+
