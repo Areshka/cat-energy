@@ -1,0 +1,45 @@
+.result__list {
+  @include reset-list-style();
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.result__item {
+  margin-bottom: 12px;
+  min-width: 122px;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+}
+
+.result__text {
+  position: relative;
+  top: 13px;
+  width: 85px;
+  margin: 0 auto;
+  font-family: $fontOswald;
+  font-size: 24px;
+  line-height: 24px;
+  color: $gray-1;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: $gray-light;
+
+  &--small {
+    margin-top: 7px;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 12px;
+    text-transform: lowercase;
+    color: $colorText;
+  }
+}
+
+.result__total {
+  font-family: $fontOswald;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $gray-1;
+}
