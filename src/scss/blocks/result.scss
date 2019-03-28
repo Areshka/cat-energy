@@ -2,21 +2,22 @@
   @include reset-list-style();
   display: flex;
   justify-content: space-between;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 }
 
 .result__item {
-  margin-bottom: 12px;
   min-width: 122px;
+  margin-bottom: 12px;
+  padding-top: 16px;
   border: 1px solid #cdcdcd;
   border-radius: 3px;
 }
 
 .result__text {
-  position: relative;
-  top: 13px;
-  width: 85px;
+  // display: inline-block;
+  width: 86px;
   margin: 0 auto;
+  margin-bottom: -14px;
   font-family: $fontOswald;
   font-size: 24px;
   line-height: 24px;
@@ -26,8 +27,9 @@
   background-color: $gray-light;
 
   &--small {
+    display: block;
     margin-top: 7px;
-    display: inline-block;
+    font-family: $fontArial;
     font-size: 12px;
     line-height: 12px;
     text-transform: lowercase;
@@ -42,4 +44,59 @@
   text-align: center;
   text-transform: uppercase;
   color: $gray-1;
+}
+
+@media #{unquote($tabletWidth)} {
+
+  .result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .result__list {
+    margin-bottom: 0;
+  }
+
+  .result__item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    min-width: 162px;
+    margin-bottom: 0;
+    margin-right: 40px;
+    padding-top: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .result__text {
+    display: inline-block;
+    width: auto;
+    margin-bottom: -7px;
+    padding: 0 10px;
+    font-size: 30px;
+    line-height: 30px;
+    background-color: $white;
+
+    &--small {
+      margin-top: 14px;
+      font-size: 14px;
+      line-height: 14px;
+    }
+
+    &--small br {
+      display: none;
+    }
+  }
+
+  .result__total {
+    width: 192px;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right;
+  }
+
 }
