@@ -135,8 +135,38 @@
   }
 
   .advantages__text {
+    flex-grow: 1;
     padding-right: 60px;
     font-size: 16px;
     line-height: 24px;
+  }
+}
+
+@media #{unquote($desktopWidth)} {
+
+  .advantages {
+    padding-top: 72px;
+    padding-bottom: 25px;
+  }
+
+  .advantages__title {
+    margin-bottom: 73px;
+  }
+
+  .advantages__item {
+    width: 245px;
+    margin-bottom: 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
+  }
+
+  .advantages__text {
+    padding-right: 0;
   }
 }
