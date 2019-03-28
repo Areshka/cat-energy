@@ -25,8 +25,6 @@
   var radioAfter = document.getElementById("after");
   var track = document.querySelector(".slider__track");
   var thumb = track.querySelector(".slider__thumb");
-  imgBefore.style.width = "100%";
-  imgAfter.style.width = "0";
 
   radioBefore.addEventListener("change", function(event) {
     event.preventDefault();
@@ -46,10 +44,6 @@
     }
   });
 
-
-
-
   /*======    end SLIDER    ======*/
-
 
 })();
