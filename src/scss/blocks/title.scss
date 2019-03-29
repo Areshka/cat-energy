@@ -1,0 +1,14 @@
+.title {
+  font-family: $fontOswald;
+  font-size: 36px;
+  line-height: 60px;
+  font-weight: normal;
+  color: $gray-1;
+}
+
+@media #{unquote($tabletWidth)} {
+
+  .title {
+    font-size: 60px;
+  }
+}
