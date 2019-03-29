@@ -45,7 +45,6 @@
   padding: 0 $mobilePads;
 
   @media #{unquote($tabletWidth)} {
-    width: 92%;
     margin: 0 auto;
     padding: 0 $tabletPads;
   }
