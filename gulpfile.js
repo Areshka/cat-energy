@@ -129,6 +129,7 @@ function svg() {
     .pipe(cheerio({
       run: function ($) {
         $('[fill]').removeAttr('fill');
+        $('[style]').removeAttr('style');
       },
       parserOptions: {
         xmlMode: true
