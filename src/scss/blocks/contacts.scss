@@ -1,0 +1,119 @@
+.contacts__wrapper {
+  @include containerFluid();
+}
+
+.contacts__textBox {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 27px;
+  padding-bottom: 26px;
+  line-height: 20px;
+}
+
+.contacts__recruitment {
+  width: 140px;
+  font-family: $fontOswald;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.contacts__address {
+  width: 140px;
+  font-family: $fontArial;
+  font-size: 14px;
+  font-style: normal;
+}
+
+.contacts__map {
+  width: 100%;
+  height: 362px;
+  background-color: #fdf7ef;
+  background-image: url($imgFolder + "raster/map-pin.png"), url($imgFolder + "raster/bg-map-mobile@1x.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center 50%, center -40px;
+  background-size: 62px, 345px;
+
+  @media retina {
+    background-image: url("../img/raster/map-pin.png"), url("../img/raster/bg-map-mobile@2x.png");
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media #{unquote($tabletWidth)} {
+
+  .contacts__recruitment {
+    width: 155px;
+    margin-left: 40px;
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .contacts__address {
+    margin-right: 40px;
+    text-align: right;
+
+    &--city {
+      display: inline-block;
+      margin-top: 20px;
+    }
+  }
+
+  .contacts__map {
+    height: 396px;
+    background-image: url($imgFolder + "raster/map-pin.png"), url($imgFolder + "raster/bg-map-tablet@1x.png");
+    background-position: center 52%, center;
+    background-size: 113px, contain;
+
+    @media retina {
+      background-image: url("../img/raster/map-pin.png"), url("../img/raster/bg-map-tablet@2x.png");
+    }
+  }
+}
+
+@media #{unquote($desktopWidth)} {
+
+  .contacts {
+    position: relative;
+  }
+
+  .contacts__wrapper {
+    padding: 0;
+    background-color: red;
+  }
+
+  .contacts__textBox {
+    position: absolute;
+    top: 96px;
+    width: 420px;
+    padding: 67px 75px 56px;
+    background-color: $white;
+  }
+
+  .contacts__recruitment {
+    width: 168px;
+    margin-left: 0;
+    font-size: 20px;
+  }
+
+  .contacts__address {
+    width: 168px;
+    margin-right: 0px;
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .contacts__map {
+    height: 399px;
+    background-image: url($imgFolder + "raster/map-pin.png"), url($imgFolder + "raster/bg-map-desktop@1x.png");
+    background-position: 72.7% 52%, center;
+    background-size: 113px, 1440px;
+
+    @media retina {
+      background-image: url("../img/raster/map-pin.png"), url("../img/raster/bg-map-desctop@2x.png");
+    }
+  }
+}
