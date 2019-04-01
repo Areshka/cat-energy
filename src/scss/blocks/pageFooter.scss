@@ -1,0 +1,4 @@
+.pageFooter {
+  @include containerFluid();
+  background-color: $gray-light;
+}

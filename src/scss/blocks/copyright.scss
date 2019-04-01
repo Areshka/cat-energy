@@ -1,0 +1,31 @@
+.copyright {
+  padding: 22px 0;
+  // background-color: green;
+}
+
+.copyright__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: $fontArial;
+  font-size: 16px;
+  line-height: 16px;
+  text-decoration: none;
+  color: $colorText;
+  transition: opacity .3s ease;
+
+  &:hover .copyright__icon {
+    fill: $green;
+  }
+
+  &:active {
+    opacity: .3;
+  }
+}
+
+.copyright__icon {
+  width: 27px;
+  height: 34px;
+  fill: #666666;
+  transition: fill .3s ease;
+}

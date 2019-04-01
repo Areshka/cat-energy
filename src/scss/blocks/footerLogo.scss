@@ -1,0 +1,21 @@
+.footerLogo {
+  padding-top: 38px;
+  padding-bottom: 30px;
+  text-align: center;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.footerLogo__image {
+  width: 128px;
+  height: 24px;
+  fill: $gray-1;
+  transition: fill .3s ease;
+
+  &:hover {
+    fill-opacity: .8;
+  }
+
+  &:active {
+    fill-opacity: .6;
+  }
+}
