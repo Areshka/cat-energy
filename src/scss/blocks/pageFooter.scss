@@ -1,4 +1,18 @@
 .pageFooter {
-  @include containerFluid();
   background-color: $gray-light;
+}
+
+.pageFooter__wrapper {
+  @include containerFluid();
+}
+
+@media #{unquote($tabletWidth)} {
+
+  .pageFooter__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 58px;
+    padding-bottom: 58px;
+  }
 }

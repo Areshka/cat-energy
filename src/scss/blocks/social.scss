@@ -46,3 +46,36 @@
     height: 19px;
   }
 }
+
+@media #{unquote($tabletWidth)} {
+
+  .social {
+    padding: 0;
+    border-bottom: none;
+  }
+
+  .social__item {
+    margin-right: 28px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .social__icon {
+    &--vk {
+      width: 30px;
+      height: 16px;
+    }
+
+    &--insta {
+      width: 23px;
+      height: 23px;
+    }
+
+    &--fb {
+      width: 14px;
+      height: 28px;
+    }
+  }
+}

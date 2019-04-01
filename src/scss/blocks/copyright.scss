@@ -29,3 +29,14 @@
   fill: #666666;
   transition: fill .3s ease;
 }
+
+@media #{unquote($tabletWidth)} {
+
+  .copyright {
+    padding: 0;
+  }
+
+  .copyright__title {
+    margin-right: 22px;
+  }
+}
