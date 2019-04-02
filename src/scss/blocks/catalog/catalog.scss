@@ -1,0 +1,47 @@
+.catalog__list {
+  @include containerFluid();
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.catalog__item {
+  padding: 0 20px 24px;
+  border-top: 1px solid $borderColor;
+
+  &:last-child {
+    border-bottom: 1px solid $borderColor;
+  }
+
+  &--more {
+    position: relative;
+    padding-top: 80px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 40px;
+      left: 0;
+      right: 0;
+      width: 30px;
+      height: 2px;
+      margin: auto;
+      background-color: #d3d3d3;
+    }
+
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.catalog__title {
+  margin-top: 15px;
+  margin-bottom: 28px;
+}
+
+.catalog__btn {
+  padding: 10px;
+  font-size: 16px;
+  line-height: 20px;
+}
