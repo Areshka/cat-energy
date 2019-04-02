@@ -28,6 +28,19 @@
   &:focus {
     text-decoration: none;
   }
+
+  &--gray {
+    color: $colorText;
+    background-color: $gray-light;
+
+    &:hover {
+      background-color: #ebebeb;
+    }
+
+    &:active {
+      color: rgba($colorText, .4);
+    }
+  }
 }
 
 @media #{unquote($tabletWidth)} {
