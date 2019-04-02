@@ -82,6 +82,16 @@
 
 @media #{unquote($mobileWidthsOnly)} {
 
+  .mainNav {
+    border-bottom: 1px solid #e6e6e6;
+    margin-right: -20px;
+    margin-left: -20px;
+
+    &.mainNav--opened {
+      border-bottom: none;
+    }
+  }
+
   .mainNav--closed .mainNav__list {
     display: none;
   }
@@ -89,8 +99,6 @@
   .mainNav--opened .mainNav__list,
   .mainNav--nojs .mainNav__list {
     display: block;
-    margin-left: -20px;
-    margin-right: -20px;
   }
 
   .mainNav--nojs .mainNav__toggle {
