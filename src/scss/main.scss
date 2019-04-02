@@ -8,19 +8,19 @@
 @import "components/scaffolding.scss";
 
 // import blocks
-@import "blocks/button.scss";
-@import "blocks/pageHeader.scss";
-@import "blocks/mainNav.scss";
-@import "blocks/siteList.scss";
-@import "blocks/jumbotron.scss";
-@import "blocks/categories.scss";
-@import "blocks/title.scss";
-@import "blocks/advantages.scss";
-@import "blocks/example.scss";
-@import "blocks/result.scss";
-@import "blocks/slider.scss";
-@import "blocks/contacts.scss";
-@import "blocks/pageFooter.scss";
-@import "blocks/footerLogo.scss";
-@import "blocks/social.scss";
-@import "blocks/copyright.scss";
+@import "blocks/common/button.scss";
+@import "blocks/common/pageHeader.scss";
+@import "blocks/common/mainNav.scss";
+@import "blocks/common/siteList.scss";
+@import "blocks/index/jumbotron.scss";
+@import "blocks/index/categories.scss";
+@import "blocks/common/title.scss";
+@import "blocks/index/advantages.scss";
+@import "blocks/index/example.scss";
+@import "blocks/index/result.scss";
+@import "blocks/index/slider.scss";
+@import "blocks/index/contacts.scss";
+@import "blocks/common/pageFooter.scss";
+@import "blocks/common/footerLogo.scss";
+@import "blocks/common/social.scss";
+@import "blocks/common/copyright.scss";
