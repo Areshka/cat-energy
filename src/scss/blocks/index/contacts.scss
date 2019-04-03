@@ -1,3 +1,7 @@
+.contacts {
+  background-color: $gray-light;
+}
+
 .contacts__wrapper {
   @include containerFluid();
 }

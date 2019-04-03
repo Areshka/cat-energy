@@ -1,0 +1,169 @@
+.extraGoods {
+  @include containerFluid();
+  position: relative;
+  border-top: 1px solid transparent;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 43px;
+    z-index: 1;
+    left: 20px;
+    width: calc(100% - 20px);
+    height: 3px;
+    background-color: $green;
+  }
+}
+
+.extraGoods__title {
+  position: relative;
+  z-index: 2;
+  width: 226px;
+  margin-top: 28px;
+  margin-bottom: 34px;
+  padding-right: 24px;
+  font-family: $fontOswald;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: normal;
+  background-color: $white;
+}
+
+.extraGoods__list {
+  @include reset-list-style();
+  margin-bottom: 40px;
+}
+
+.extraGoods__item {
+  padding: 12px 0 17px;
+  border-top: 1px solid #cdcdcd;
+
+  &:last-child {
+    border-bottom: 1px solid #cdcdcd;
+  }
+}
+
+.extraGoods__name {
+  margin-bottom: 15px;
+  font-family: $fontOswald;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.extraGoods__info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.extraGoods__btn {
+  padding: 10px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.extraGoods__gift {
+  width: 100%;
+  min-height: 290px;
+  margin-bottom: 35px;
+  padding: 65px 60px 41px;
+  font-family: $fontArial;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: $white;
+  background-color: $green;
+  background-image: url($imgFolder + "raster/gift-photo-mobile@1x.jpg");
+
+  @media #{unquote($retina)} {
+    background-image: url($imgFolder + "raster/gift-photo-mobile@2x.jpg");
+  }
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+.gift__icon {
+  margin-bottom: 60px;
+  fill: $white;
+}
+
+@media #{unquote($tabletWidth)} {
+
+  .extraGoods::after {
+    top: 27px;
+    left: 0;
+    width: 100%;
+  }
+
+  .extraGoods__title {
+    width: 338px;
+    margin-top: 8px;
+    margin-bottom: 77px;
+    padding-right: 36px;
+    padding-left: 36px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .extraGoods__list {
+    margin-bottom: 70px;
+  }
+
+  .extraGoods__item {
+    padding: 25px 39px 28px;
+  }
+
+  .extraGoods__product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 27px;
+  }
+
+  .extraGoods__name {
+    margin-bottom: 0;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .extraGoods__info {
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .extraGoods__info span:first-child {
+    margin-right: 53px;
+  }
+
+
+  .extraGoods__gift {
+    display: flex;
+    justify-content: space-between;
+    min-height: 200px;
+    margin-bottom: 75px;
+    padding: 65px 122px 70px 90px;
+    background-image: url($imgFolder + "raster/gift-photo-tablet@1x.jpg");
+
+    @media #{unquote($retina)} {
+      background-image: url($imgFolder + "raster/gift-photo-tablet@2x.jpg");
+    }
+  }
+
+  .gift__icon {
+    margin-bottom: 0;
+  }
+
+  .extraGoods__action {
+    width: 165px;
+    text-align: left;
+  }
+
+}
