@@ -124,7 +124,6 @@
     }
   }
 
-
   .productMore__title {
     width: 170px;
     margin: auto;
@@ -139,5 +138,12 @@
     margin-bottom: 90px;
     padding: 0 10px;
     font-size: 16px;
+  }
+}
+
+@media #{unquote($desktopWidth)} {
+
+  .product__image img {
+    width: 245px;
   }
 }

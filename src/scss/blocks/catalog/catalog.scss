@@ -96,3 +96,15 @@
     }
   }
 }
+
+@media #{unquote($desktopWidth)} {
+
+  .catalog__title {
+    margin-top: 75px;
+    margin-bottom: 80px;
+  }
+
+  .catalog__item {
+    width: 20.1%;
+  }
+}
