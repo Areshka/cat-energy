@@ -1,10 +1,22 @@
-.catalog__list {
+.catalog {
   @include containerFluid();
-  padding: 0;
-  box-sizing: border-box;
+  // background-color: red;
+}
+
+.catalog__title {
+  margin-top: 15px;
+  margin-bottom: 28px;
+}
+
+
+.catalog__list {
+  margin-right: -20px;
+  margin-left: -20px;
+  // background-color: yellow;
 }
 
 .catalog__item {
+  // background-color: green;
   padding: 0 20px 24px;
   border-top: 1px solid $borderColor;
 
@@ -35,13 +47,52 @@
   }
 }
 
-.catalog__title {
-  margin-top: 15px;
-  margin-bottom: 28px;
-}
-
 .catalog__btn {
   padding: 10px;
   font-size: 16px;
   line-height: 20px;
+}
+
+@media #{unquote($tabletWidth)} {
+
+  .catalog__title {
+    margin-top: 60px;
+    margin-bottom: 84px;
+  }
+
+  .catalog__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+
+  .catalog__item {
+    display: flex;
+    flex-direction: column;
+    width: 45.8%;
+    min-height: 430px;
+    margin-top: 80px;
+    margin-bottom: 60px;
+    padding: 0 37px 40px;
+    background-color: $gray-light;
+    box-sizing: border-box;
+    border-top: none;
+
+    &:last-child {
+      border: 1px solid $borderColor;
+    }
+
+    &--more {
+      background-color: transparent;
+      padding-top: 165px;
+
+      &::before,
+      &::after {
+        top: 83px;
+        width: 60px;
+      }
+    }
+  }
 }
