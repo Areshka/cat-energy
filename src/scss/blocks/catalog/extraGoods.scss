@@ -1,32 +1,45 @@
 .extraGoods {
+  padding-top: 28px;
+  overflow: hidden;
+}
+
+.extraGoods__wrapper {
   @include containerFluid();
   position: relative;
-  border-top: 1px solid transparent;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 43px;
-    z-index: 1;
-    left: 20px;
-    width: calc(100% - 20px);
-    height: 3px;
-    background-color: $green;
-  }
 }
 
 .extraGoods__title {
   position: relative;
-  z-index: 2;
-  width: 226px;
-  margin-top: 28px;
+  display: inline-block;
+  margin-left: -20px;
   margin-bottom: 34px;
+  padding-left: 20px;
   padding-right: 24px;
   font-family: $fontOswald;
   font-size: 24px;
-  line-height: 24px;
-  font-weight: normal;
-  background-color: $white;
+  line-height: 1;
+  font-weight: 400;
+  color: $gray-1;
+  background: $bgWhite;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 55%;
+    z-index: -1;
+    width: 100vw;
+    height: 3px;
+    background-color: $green;
+  }
+
+  &::before {
+    right: 100%;
+  }
+
+  &::after {
+    left: 100%;
+  }
 }
 
 .extraGoods__list {
@@ -96,20 +109,17 @@
 
 @media #{unquote($tabletWidth)} {
 
-  .extraGoods::after {
-    top: 27px;
-    left: 0;
-    width: 100%;
+  .extraGoods {
+    padding-top: 7px;
   }
 
   .extraGoods__title {
-    width: 338px;
-    margin-top: 8px;
-    margin-bottom: 77px;
-    padding-right: 36px;
-    padding-left: 36px;
+    margin-left: 0;
+    margin-bottom: 80px;
+    padding-left: 37px;
+    padding-right: 39px;
     font-size: 36px;
-    line-height: 36px;
+    line-height: 1;
   }
 
   .extraGoods__list {
@@ -143,7 +153,6 @@
     margin-right: 53px;
   }
 
-
   .extraGoods__gift {
     display: flex;
     justify-content: space-between;
@@ -166,4 +175,73 @@
     text-align: left;
   }
 
+}
+
+@media #{unquote($desktopWidth)} {
+
+  .extraGoods {
+    padding-top: 15px;
+    padding-bottom: 85px;
+  }
+
+  .extraGoods__title {
+    margin-left: -40px;
+    padding-left: 40px;
+  }
+
+  .extraGoods__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .extraGoods__list {
+    flex-grow: 1;
+    margin-right: 80px;
+    margin-bottom: 0;
+  }
+
+  .extraGoods__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 15px 0 16px;
+  }
+
+  .extraGoods__product {
+    flex-grow: 1;
+    margin-right: 40px;
+    margin-bottom: 0;
+  }
+
+  .extraGoods__name {
+    width: 245px;
+  }
+
+  .extraGoods__info {
+    width: 285px;
+  }
+
+  .extraGoods__btn {
+    width: 245px;
+    box-sizing: border-box;
+  }
+
+  .extraGoods__gift {
+    flex-direction: column;
+    align-items: center;
+    width: 245px;
+    min-height: 289px;
+    margin-bottom: 0;
+    padding: 65px 42px 42px;
+    background-image: url($imgFolder + "raster/gift-photo-desktop@1x.jpg");
+
+    @media #{unquote($retina)} {
+      background-image: url($imgFolder + "raster/gift-photo-desktop@2x.jpg");
+    }
+  }
+
+  .extraGoods__action {
+    width: auto;
+    text-align: center;
+  }
 }
