@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/main.min.css">
+  <title>Cat Energy</title>
+</head>
+
+<body>
+  <header class="pageHeader">
+    <div class="pageHeader__wrapper">
+      <a href="index.html" class="paheHeader__logo">
+        <picture>
+          <source media="(min-width: 1300px)" srcset="img/vector/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/vector/logo-tablet.svg">
+          <img class="pageHeader__logoImage" src="img/vector/logo-mobile.svg" width="33" height="38" alt="Cat Energy">
+        </picture>
+        <svg class="icon pageHeader__logoTitle" width="101" height="18">
+          <use xlink:href="#logo-mobile-header"></use>
+        </svg>
+      </a>
+      <nav class="mainNav  mainNav--closed  mainNav--nojs">
+        <button class="mainNav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <ul class="mainNav__list  siteList">
+          <li class="siteList__item"><a href="index.html">Главная</a></li>
+          <li class="siteList__item"><a href="catalog.html">Каталог продукции</a></li>
+          <li class="siteList__item  siteList__item--active"><a>Подбор программы</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pageMain">
+
+    <h1 class="visually-hidden">Cat Energy - Функциональное питание для котов</h1>
+    <form class="programForm" action="#" method="post">
+      <h2 class="title  programForm__title">Подбор программы</h2>
+      <p class="program__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
+
+      <section class="formSection__wrapper">
+        <fieldset class="formSection">
+          <label class="formSection__item">
+            <span class="formSection__text">Имя:*</span>
+            <input class="formSection__inputText" type="text" name="name" maxlength="35" placeholder="Барсик" required>
+          </label>
+          <label class="formSection__item">
+            <span class="formSection__text">Вес (кг):*</span>
+            <input class="formSection__inputText" type="text" name="weight" maxlength="6" placeholder="7" required>
+          </label>
+          <label class="formSection__item">
+            <span class="formSection__text">Возраст (лет):</span>
+            <input class="formSection__inputText" type="text" name="age" maxlength="6" placeholder="7">
+          </label>
+        </fieldset>
+        <fieldset class="formSection">
+          <label class="formSection__item">
+            <input class="formSection__radio" type="radio" name="program" value="losing-weight" checked>
+            <span class="formSection__text">Похудение</span>
+          </label>
+          <label class="formSection__item">
+            <input class="formSection__radio" type="radio" name="program" value="gain-weight">
+            <span class="formSection__text">Набор массы</span>
+          </label>
+          <label class="formSection__item">
+            <input class="formSection__inputText" type="radio" name="program" value="need-advice">
+            <span class="formSection__text">Не знаю (нужен ваш совет)</span>
+          </label>
+        </fieldset>
+      </section>
+      <fieldset class="formSection">
+        <h3 class="formSection__title">Контактные данные (владельца кота)</h3>
+        <label for="formSection__item">
+          <span class="formSection__text">e-mail:*</span>
+          <div class="formSection__inputWrapper">
+            <input class="formSection__contact" type="email" name="email" placeholder="kuklachev@gmail.com">
+            <svg class="icon  formSection__icon" width="13" height="17">
+              <use xlink:href="#icon-mail"></use>
+            </svg>
+          </div>
+        </label>
+        <label for="formSection__item">
+          <span class="formSection__text">телефон:*</span>
+          <div class="formSection__inputWrapper">
+          <input class="formSection__contact" type="tel" name="tel" placeholder="8(960) 900-60-90">
+            <svg class="icon  formSection__icon" width="20" height="20">
+              <use xlink:href="#icon-phone"></use>
+            </svg>
+          </div>
+        </label>
+      </fieldset>
+      <fieldset class="formSection">
+        <h3 class="formSection__title">Комментарий</h3>
+        <textarea name="comment" cols="30" rows="10" placeholder="расскажите обо всех повадках кота"></textarea>
+      </fieldset>
+      <fieldset class="formSection">
+        <h3 class="formSection__title">Дополнительно</h3>
+        <label class="formSection__item">
+          <input class="formSecction__checkbox" type="checkbox" name="additionally" value="sweetener" checked>
+          <span class="formSection__text">Сахарозаменитель</span>
+        </label>
+        <label class="formSection__item">
+          <input class="formSecction__checkbox" type="checkbox" name="additionally" value="water">
+          <span class="formSection__text">Питьевая вода</span>
+        </label>
+        <label class="formSection__item">
+          <input class="formSecction__checkbox" type="checkbox" name="additionally" value="milk">
+          <span class="formSection__text">Молоко</span>
+        </label>
+        <label class="formSection__item">
+          <input class="formSecction__checkbox" type="checkbox" name="additionally" value="vitamins">
+          <span class="formSection__text">Витамины</span>
+        </label>
+      </fieldset>
+      <section class="programForm__submit">
+        <button class="button" type="submit">Отправить заявку</button>
+        <p class="programForm__note"><sup>*</sup> — Обязательные поля</p>
+      </section>
+    </form>
+
+    <section class="contacts">
+      <div class="contacts__wrapper">
+        <div class="contacts__textBox">
+          <p class="contacts__recruitment">
+            Приглашаем<br> к сотрудничеству дилеров!
+          </p>
+          <address class="contacts__address">
+            ул. Большая Конюшенная, д. 19/8 <span class="contacts__address--city">Санкт-Петербург</span>
+          </address>
+        </div>
+      </div>
+      <div class="contacts__map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1554120262663!5m2!1sru!2sua"
+          frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pageFooter">
+    <div class="pageFooter__wrapper">
+      <section class="footerLogo">
+        <a class="footerLogo__link" href="">
+          <svg class="icon footerLogo__image" width="128" height="24">
+            <use xlink:href="#logo-footer"></use>
+          </svg>
+        </a>
+      </section>
+      <section class="pageFooter__social  social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link" href="">
+              <svg class="icon  social__icon  social__icon--vk" width="22" height="12">
+                <use xlink:href="#icon-vk"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="">
+              <svg class="icon  social__icon  social__icon--insta" width="16" height="16">
+                <use xlink:href="#icon-insta"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="">
+              <svg class="icon  social__icon  social__icon--fb" width="10" height="19">
+                <use xlink:href="#icon-fb"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section class="pageFooter__copyright  copyright">
+        <a class="copyright__link" href="">
+          <span class="copyright__title">HTML Academy</span>
+          <svg class="icon  copyright__icon" width="27" height="34">
+            <use xlink:href="#logo-htmlacademy"></use>
+          </svg>
+        </a>
+      </section>
+    </div>
+  </footer>
+
+  <div style="display:none">
+    <include src="build/img/vector/sprite.svg"></include>
+  </div>
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
