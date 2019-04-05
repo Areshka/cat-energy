@@ -1,0 +1,17 @@
+.programForm {
+  @include containerFluid();
+}
+
+.programForm__title {
+  margin-top: 15px;
+  margin-bottom: 28px;
+}
+
+.program__text {
+  margin-bottom: 17px;
+  padding-right: 20px;
+  font-family: $fontOswald;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}

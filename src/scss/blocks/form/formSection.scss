@@ -1,0 +1,55 @@
+.formSection {
+  padding: 21px 0;
+  font-family: $fontOswald;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  border: none;
+}
+
+.formSection__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  margin-bottom: 14px;
+}
+
+.formSection__text {
+  margin-right: 15px;
+  display: block;
+  text-transform: uppercase;
+}
+
+.formSection__inputText,
+.formSection__contact {
+  flex-grow: 1;
+  min-width: 70px;
+  padding: 13px;
+  box-sizing: border-box;
+  font-family: $fontOswald;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $colorText;
+  outline: none;
+  border: 1px solid $borderColor;
+  transition: border-color .3s ease;
+
+  &:hover {
+    border-color: $borderColorHover;
+  }
+
+  &:active,
+  &:focus {
+    border-color: $borderColorActive;
+    box-shadow: inset 0 0 0 1px $borderColorActive;
+  }
+
+  &:active:invalid,
+  &:focus:invalid,
+  &.invalid {
+    border-color: $borderColorError;
+    box-shadow: inset 0 0 0 1px $borderColorError;
+  }
+}
