@@ -1,30 +1,47 @@
+.formSection__wrapper {
+  margin-bottom: 28px;
+
+  .formSection {
+    margin-bottom: 23px;
+  }
+}
+
 .formSection {
-  padding: 21px 0;
+  padding: 0;
   font-family: $fontOswald;
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
   border: none;
+  margin-bottom: 28px;
+
+  &--chooseProgram {
+    margin: 0 -20px;
+    padding: 20px;
+    border-top: 1px solid $borderColor;
+    border-bottom: 1px solid $borderColor;
+  }
 }
 
 .formSection__item {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   max-width: 100%;
   margin-bottom: 14px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .formSection__text {
-  margin-right: 15px;
-  display: block;
   text-transform: uppercase;
 }
 
 .formSection__inputText,
 .formSection__contact {
   flex-grow: 1;
-  min-width: 70px;
+  height: 45px;
   padding: 13px;
   box-sizing: border-box;
   font-family: $fontOswald;
@@ -52,4 +69,169 @@
     border-color: $borderColorError;
     box-shadow: inset 0 0 0 1px $borderColorError;
   }
+
+  &::placeholder {
+    color: rgba($colorText, .7);
+    opacity: 1;
+    transition: opacity .4s;
+  }
+
+  &:focus::placeholder {
+    opacity: 0;
+  }
 }
+
+.formSection__inputText {
+  margin-left: 15px;
+}
+
+.formSection__contact {
+  padding-right: 35px;
+
+  & + .formSection__icon {
+    transition: all .3s ease;
+  }
+
+  &:active + .formSection__icon,
+  &:focus + .formSection__icon {
+    fill: $green;
+  }
+
+  &:active:invalid + .formSection__icon,
+  &:focus:invalid + .formSection__icon,
+  &.invalid + .formSection__icon {
+    fill: $borderColorError;
+  }
+}
+
+.formSection__title {
+  position: relative;
+  display: inline-block;
+  margin-left: -22px;
+  margin-bottom: 34px;
+  padding-left: 20px;
+  padding-right: 24px;
+  font-family: $fontOswald;
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 400;
+  color: $gray-1;
+  background: $bgWhite;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    z-index: -1;
+    width: 100vw;
+    height: 3px;
+    background-color: $green;
+  }
+
+  &::before {
+    right: 100%;
+  }
+
+  &::after {
+    left: 100%;
+  }
+}
+
+.formSection__inputWrapper {
+  position: relative;
+  flex-grow: 1;
+  margin-left: 15px;
+  background-color: green;
+  display: inline-block;
+}
+
+.formSection__contact {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.formSection__icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  &--mail {
+    top: 15px;
+    right: 15px;
+    width: 17px;
+    height: 13px;
+    fill: $gray-2;
+  }
+
+  &--phone {
+    top: 12px;
+    right: 12px;
+    width: 20px;
+    height: 20px;
+    fill: $gray-2;
+  }
+}
+
+.formSection__textarea {
+  width: 100%;
+  height: 148px;
+  padding: 13px 15px;
+  font-family: $fontOswald;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  border: 1px solid $borderColor;
+  outline: none;
+  box-sizing: border-box;
+  resize: none;
+}
+
+.formSection__text--radio,
+.formSection__text--checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: opacity .3s ease;
+
+  &::before {
+    content: "";
+    width: 28px;
+    height: 28px;
+    margin-right: 16px;
+    background-color: $bgWhite;
+    border: 1px solid #cdcdcd;
+    transition: border-color .3s ease;
+  }
+
+  &:hover::before {
+    border-color: #bababa;
+  }
+
+  &:active {
+    opacity: .3;
+  }
+}
+
+.formSection__text--radio::before {
+  border-radius: 50%;
+}
+
+.formSection__radio:disabled + .formSection__text--radio,
+.formSection__radio.disabled + .formSection__text--radio {
+  opacity: .3;
+  cursor: not-allowed;
+}
+
+.formSection__radio:checked + .formSection__text--radio::before {
+  background-image: radial-gradient($green 0, $green 6px, $white 6px, $white 100%);
+}
+
+.formSection__checkbox:checked + .formSection__text--checkbox::before {
+  background-image: url(../../../img/vector/icon-tick.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 21px 16px;
+}
+
+

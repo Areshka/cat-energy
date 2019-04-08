@@ -1,4 +1,8 @@
 .programForm {
+  overflow: hidden;
+}
+
+.programForm__wrapper {
   @include containerFluid();
 }
 
@@ -8,10 +12,27 @@
 }
 
 .program__text {
-  margin-bottom: 17px;
+  margin-bottom: 37px;
   padding-right: 20px;
   font-family: $fontOswald;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+}
+
+.programForm__submit {
+  margin-top: 34px;
+  margin-bottom: 34px;
+}
+
+.programForm__btn {
+  width: 100%;
+  margin-bottom: 23px;
+}
+
+.programForm__note {
+  font-family: $fontArial;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
 }
