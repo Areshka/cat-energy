@@ -12,8 +12,7 @@
 }
 
 .program__text {
-  margin-bottom: 37px;
-  padding-right: 20px;
+  margin-bottom: 39px;
   font-family: $fontOswald;
   font-size: 14px;
   line-height: 18px;
@@ -21,7 +20,6 @@
 }
 
 .programForm__submit {
-  margin-top: 34px;
   margin-bottom: 34px;
 }
 
@@ -35,4 +33,64 @@
   font-size: 14px;
   line-height: 16px;
   text-align: center;
+}
+
+@media #{unquote($tabletWidth)} {
+
+  .programForm__title {
+    margin-top: 58px;
+    margin-bottom: 60px;
+  }
+
+  .program__text {
+    margin-bottom: 66px;
+    padding-left: 40px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .programForm__submit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 72px;
+    padding: 0 40px;
+  }
+
+  .programForm__btn {
+    width: 46.5%;
+    margin-right: 60px;
+    margin-bottom: 0;
+  }
+
+  .programForm__note {
+    width: 46.5%;
+    font-size: 16px;
+    text-align: left;
+  }
+}
+
+@media #{unquote($desktopWidth)} {
+
+  .programForm__title {
+    margin-top: 78px;
+    margin-bottom: 55px;
+  }
+
+  .program__text {
+    padding-left: 0;
+  }
+
+  .programForm__submit {
+    margin-bottom: 82px;
+    padding: 0;
+  }
+
+  .programForm__btn {
+    width: 46.7%;
+  }
+
+  .programForm__note {
+    width: 46.7%;
+  }
 }
