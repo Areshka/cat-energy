@@ -42,86 +42,102 @@
       <div class="programForm__wrapper">
 
         <h2 class="title  programForm__title">Подбор программы</h2>
-        <p class="program__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        <p class="program__text">Заполните анкету и мы подберем<br> программу питания для вашего кота</p>
 
         <section class="formSection__wrapper">
-          <fieldset class="formSection">
-            <label class="formSection__item  formSection__item--text">
-              <span class="formSection__text">Имя:*</span>
-              <input class="formSection__inputText" type="text" name="name" maxlength="35" placeholder="Барсик" required>
+          <fieldset class="formSection  formSection--feature">
+            <label class="formSection__item">
+              <span class="formSection__name">Имя:*</span>
+              <input class="formSection__textField  formSection__inputText" type="text" name="name" maxlength="35"
+                placeholder="Барсик" required>
             </label>
-            <label class="formSection__item  formSection__item--text">
-              <span class="formSection__text">Вес (кг):*</span>
-              <input class="formSection__inputText" type="text" name="weight" maxlength="6" placeholder="7" required>
+
+            <label class="formSection__item">
+              <span class="formSection__name">Вес (кг):*</span>
+              <input class="formSection__textField  formSection__inputText" type="text" name="weight" maxlength="6"
+                placeholder="7" required>
             </label>
-            <label class="formSection__item  formSection__item--text">
-              <span class="formSection__text">Возраст (лет):</span>
-              <input class="formSection__inputText" type="text" name="age" maxlength="6" placeholder="7">
+
+            <label class="formSection__item">
+              <span class="formSection__name">Возраст (лет):</span>
+              <input class="formSection__textField  formSection__inputText" type="text" name="age" maxlength="6"
+                placeholder="7">
             </label>
           </fieldset>
 
-          <fieldset class="formSection  formSection--chooseProgram">
-            <label class="formSection__item">
-              <input class="formSection__radio  visually-hidden" type="radio" name="program" value="losing-weight" checked>
-              <span class="formSection__text  formSection__text--radio">Похудение</span>
+          <fieldset class="formSection  formSection--program">
+            <label class="formSection__item  formSection__item--radio">
+              <input class="formSection__radio  visually-hidden" type="radio" name="program" value="losing-weight"
+                checked>
+              <span class="formSection__name  formSection__name--radio">Похудение</span>
             </label>
-            <label class="formSection__item">
+
+            <label class="formSection__item  formSection__item--radio">
               <input class="formSection__radio  visually-hidden" type="radio" name="program" value="gain-weight">
-              <span class="formSection__text  formSection__text--radio">Набор массы</span>
+              <span class="formSection__name  formSection__name--radio">Набор массы</span>
             </label>
-            <label class="formSection__item">
+
+            <label class="formSection__item  formSection__item--radio">
               <input class="formSection__radio  visually-hidden" type="radio" name="program" value="need-advice">
-              <span class="formSection__text  formSection__text--radio">Не знаю (нужен ваш совет)</span>
+              <span class="formSection__name  formSection__name--radio">Не знаю (нужен ваш совет)</span>
             </label>
           </fieldset>
         </section>
 
         <fieldset class="formSection">
           <h3 class="formSection__title">Контактные данные<br> (владельца кота)</h3>
-          <label class="formSection__item">
-            <span class="formSection__text">e-mail:*</span>
-            <div class="formSection__inputWrapper">
-              <input class="formSection__contact" type="email" name="email" placeholder="kuklachev@gmail.com" required>
-              <svg class="icon  formSection__icon  formSection__icon--mail" width="17" height="13">
-                <use xlink:href="#icon-mail"></use>
-              </svg>
-            </div>
-          </label>
-          <label class="formSection__item">
-            <span class="formSection__text">телефон:*</span>
-            <div class="formSection__inputWrapper">
-              <input class="formSection__contact" type="tel" name="tel" placeholder="8(960) 900-60-90" required>
-              <svg class="icon  formSection__icon  formSection__icon--phone" width="20" height="20">
-                <use xlink:href="#icon-phone"></use>
-              </svg>
-            </div>
-          </label>
+          <div class="formSection__wrapper">
+            <label class="formSection__item  formSection__item--contacts">
+              <span class="formSection__name">e-mail:*</span>
+              <div class="formSection__contactWrapper">
+                <input class="formSection__textField  formSection__contact" type="email" name="email"
+                  placeholder="kuklachev@gmail.com" required>
+                <svg class="icon  formSection__icon  formSection__icon--mail" width="17" height="13">
+                  <use xlink:href="#icon-mail"></use>
+                </svg>
+              </div>
+            </label>
+            <label class="formSection__item  formSection__item--contacts">
+              <span class="formSection__name">телефон:*</span>
+              <div class="formSection__contactWrapper">
+                <input class="formSection__textField  formSection__contact" type="tel" name="tel"
+                  placeholder="8(960) 900-60-90" required>
+                <svg class="icon  formSection__icon  formSection__icon--phone" width="20" height="20">
+                  <use xlink:href="#icon-phone"></use>
+                </svg>
+              </div>
+            </label>
+          </div>
         </fieldset>
 
         <fieldset class="formSection">
           <h3 class="formSection__title">Комментарий</h3>
-          <textarea class="formSection__textarea" name="comment" cols="30" rows="10" placeholder="расскажите обо всех повадках кота"></textarea>
+          <textarea class="formSection__textField  formSection__textarea" name="comment" cols="30" rows="10"
+            placeholder="расскажите обо всех повадках кота"></textarea>
         </fieldset>
 
-        <fieldset class="formSection">
+        <fieldset class="formSection formSection--last">
           <h3 class="formSection__title">Дополнительно</h3>
-          <label class="formSection__item">
-            <input class="formSection__checkbox  visually-hidden" type="checkbox" name="additionally" value="sweetener"
-              checked>
-            <span class="formSection__text  formSection__text--checkbox">Сахарозаменитель</span>
-          </label>
-          <label class="formSection__item">
-            <input class="formSection__checkbox  visually-hidden" type="checkbox" name="additionally" value="water">
-            <span class="formSection__text  formSection__text--checkbox">Питьевая вода</span>
-          </label>
-          <label class="formSection__item">
-            <input class="formSection__checkbox  visually-hidden" type="checkbox" name="additionally" value="milk">
-            <span class="formSection__text  formSection__text--checkbox">Молоко</span>
-          </label>
-          <label class="formSection__item">
-            <input class="formSection__checkbox  visually-hidden" type="checkbox" name="additionally" value="vitamins">
-            <span class="formSection__text  formSection__text--checkbox">Витамины</span>
-          </label>
+          <div class="formSection__wrapper  formSection__wrapper--checkbox">
+            <label class="formSection__item  formSection__item--checkbox">
+              <input class="formSection__checkbox  visually-hidden" type="checkbox" name="additionally"
+                value="sweetener" checked>
+              <span class="formSection__name  formSection__name--checkbox">Сахарозаменитель</span>
+            </label>
+            <label class="formSection__item  formSection__item--checkbox">
+              <input class="formSection__checkbox  visually-hidden" type="checkbox" name="additionally" value="water">
+              <span class="formSection__name  formSection__name--checkbox">Питьевая вода</span>
+            </label>
+            <label class="formSection__item  formSection__item--checkbox">
+              <input class="formSection__checkbox  visually-hidden" type="checkbox" name="additionally" value="milk">
+              <span class="formSection__name  formSection__name--checkbox">Молоко</span>
+            </label>
+            <label class="formSection__item  formSection__item--checkbox">
+              <input class="formSection__checkbox  visually-hidden" type="checkbox" name="additionally"
+                value="vitamins">
+              <span class="formSection__name  formSection__name--checkbox">Витамины</span>
+            </label>
+          </div>
         </fieldset>
 
         <section class="programForm__submit">
