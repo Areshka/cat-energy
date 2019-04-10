@@ -51,6 +51,7 @@
         <p class="program__text">Заполните анкету и мы подберем<br> программу питания для вашего кота</p>
 
         <section class="formSection__wrapper">
+          <h2 class="visually-hidden">Выбор программы</h2>
           <fieldset class="formSection  formSection--feature">
             <label class="formSection__item">
               <span class="formSection__name">Имя:*</span>
@@ -91,21 +92,21 @@
           <div class="formSection__wrapper">
             <label class="formSection__item  formSection__item--contacts">
               <span class="formSection__name">e-mail:*</span>
-              <div class="formSection__contactWrapper">
+              <p class="formSection__contactWrapper">
                 <input class="formSection__textField  formSection__contact" type="email" name="email" placeholder="kuklachev@gmail.com" required="">
                 <svg class="icon  formSection__icon  formSection__icon--mail" width="17" height="13">
                   <use xlink:href="#icon-mail"></use>
                 </svg>
-              </div>
+              </p>
             </label>
             <label class="formSection__item  formSection__item--contacts">
               <span class="formSection__name">телефон:*</span>
-              <div class="formSection__contactWrapper">
+              <p class="formSection__contactWrapper">
                 <input class="formSection__textField  formSection__contact" type="tel" name="tel" placeholder="8(960) 900-60-90" required="">
                 <svg class="icon  formSection__icon  formSection__icon--phone" width="20" height="20">
                   <use xlink:href="#icon-phone"></use>
                 </svg>
-              </div>
+              </p>
             </label>
           </div>
         </fieldset>
@@ -137,10 +138,10 @@
           </div>
         </fieldset>
 
-        <section class="programForm__submit">
+        <div class="programForm__submit">
           <button class="button  programForm__btn" type="submit">Отправить заявку</button>
           <p class="programForm__note"><sup>*</sup> — Обязательные поля</p>
-        </section>
+        </div>
       </div>
 
     </form>
