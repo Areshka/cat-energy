@@ -225,7 +225,7 @@
 }
 
 .formSection__checkbox:checked+.formSection__name--checkbox::before {
-  background-image: url(../../../img/vector/icon-tick.svg);
+  background-image: url($imgFolder + "vector/icon-tick.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 21px 16px;
