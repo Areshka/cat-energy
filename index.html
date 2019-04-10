@@ -5,6 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preload" href="css/main.min.css" as="style">
+  <link rel="preload" href="js/main.min.js" as="script">
+  <link rel="preload" href="fonts/Oswald/OswaldRegular.woff2" as="font">
+  <link rel="preload" href="fonts/Oswald/OswaldRegular.woff" as="font">
+  <link rel="preload" href="fonts/Oswald/OswaldMedium.woff2" as="font">
+  <link rel="preload" href="fonts/Oswald/OswaldMedium.woff" as="font">
   <link rel="stylesheet" href="css/main.min.css">
   <title>Cat Energy</title>
 </head>
@@ -38,8 +44,11 @@
         <h2 class="jumbotron__title">Функциональное<br> питание для котов</h2>
         <p class="jumbotron__slogan">Занялся собой? Займись котом!</p>
         <picture>
+          <source type="image/webp" media="(min-width: 1300px)" srcset="img/webp/index-can-desktop@1x.webp 1x, img/webp/index-can-desktop@2x.webp 2x">
           <source media="(min-width: 1300px)" srcset="img/raster/index-can-desktop@1x.png 1x, img/raster/index-can-desktop@2x.png 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/index-can-tablet@1x.webp 1x, img/webp/index-can-tablet@2x.webp 2x">
           <source media="(min-width: 768px)" srcset="img/raster/index-can-tablet@1x.jpg 1x, img/raster/index-can-tablet@2x.jpg 2x">
+          <source type="image/webp" srcset="img/webp/index-can-mobile@1x.webp 1x, img/webp/index-can-mobile@2x.webp 2x">
           <img class="jumbotron__image" src="img/raster/index-can-mobile@1x.png" srcset="img/raster/index-can-mobile@2x.png 2x" alt="Cat Pro Energy Курица">
         </picture>
         <a class="button  jumbotron__button" href="form.html">Подобрать программу</a>
@@ -58,7 +67,7 @@
             Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
             Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
           </p>
-          <a class="categories__link" href="form.html">Каталог Slim</a>
+          <a class="categories__link" href="catalog.html">Каталог Slim</a>
         </article>
         <article class="categories__item  categories__item--pro">
           <h3 class="categories__title">Набор массы</h3>
@@ -66,7 +75,7 @@
             Заработать авторитет среди дворовых котов и даже собак?
             Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
           </p>
-          <a class="categories__link" href="form.html">Каталог Pro</a>
+          <a class="categories__link" href="catalog.html">Каталог Pro</a>
         </article>
       </div>
     </section>
@@ -126,16 +135,22 @@
           <div class="slider__images">
             <div class="slider__image  slider__image--before">
               <picture>
-                <source media="(min-width: 1300px)" srcset="img/raster/before-desktop@1x.png 1x, img/raster/before-desctop@2x.png">
-                <source media="(min-width: 768px)" srcset="img/raster/before-tablet@1x.png 1x, img/raster/before-tablet@2x.png">
-                <img src="img/raster/before-mobile@1x.png" srcset="img/raster/before-mobile@2x.png" width="251" height="240" alt="cat before">
+                <source type="image/webp" media="(min-width: 1300px)" srcset="img/webp/before-desktop@1x.webp 1x, img/webp/before-desktop@2x.webp 2x">
+                <source media="(min-width: 1300px)" srcset="img/raster/before-desktop@1x.png 1x, img/raster/before-desktop@2x.png 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/before-tablet@1x.webp 1x, img/webp/before-tablet@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="img/raster/before-tablet@1x.png 1x, img/raster/before-tablet@2x.png 2x">
+                <source type="image/webp" srcset="img/webp/before-mobile@1x.webp 1x, img/webp/before-mobile@2x.webp 2x">
+                <img src="img/raster/before-mobile@1x.png" srcset="img/raster/before-mobile@2x.png 2x" width="251" height="240" alt="cat before">
               </picture>
             </div>
             <div class="slider__image  slider__image--after">
               <picture>
-                <source media="(min-width: 1300px)" srcset="img/raster/after-desktop@1x.png 1x, img/raster/after-desctop@2x.png">
-                <source media="(min-width: 768px)" srcset="img/raster/after-tablet@1x.png 1x, img/raster/after-tablet@2x.png">
-                <img src="img/raster/after-mobile@1x.png" srcset="img/raster/after-mobile@2x.png" width="251" height="240" alt="cat after">
+                <source type="image/webp" media="(min-width: 1300px)" srcset="img/webp/after-desktop@1x.webp 1x, img/webp/after-desktop@2x.webp 2x">
+                <source media="(min-width: 1300px)" srcset="img/raster/after-desktop@1x.png 1x, img/raster/after-desktop@2x.png 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/after-tablet@1x.webp 1x, img/webp/after-tablet@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="img/raster/after-tablet@1x.png 1x, img/raster/after-tablet@2x.png 2x">
+                <source type="image/webp" srcset="img/webp/after-mobile@1x.webp 1x, img/webp/after-mobile@2x.webp 2x">
+                <img src="img/raster/after-mobile@1x.png" srcset="img/raster/after-mobile@2x.png 2x" width="251" height="240" alt="cat after">
               </picture>
             </div>
           </div>
@@ -164,7 +179,8 @@
         </div>
       </div>
       <div class="contacts__map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1554120262663!5m2!1sru!2sua" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1554120262663!5m2!1sru!2sua" frameborder="0" style="border:0" allowfullscreen="">
+        </iframe>
       </div>
     </section>
 
