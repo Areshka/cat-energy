@@ -46,6 +46,7 @@ const svgstore = require('gulp-svgstore'); // плагин для создани
 const svgmin = require("gulp-svgmin"); // плагин для минификации svg
 const gulpPosthtml = require('gulp-posthtml');
 const include = require('posthtml-include') // подключает файлы в html
+const ghpages = require('gh-pages');
 
 
 function html() {
@@ -189,3 +190,5 @@ gulp.task('build', gulp.series(clean, copy, images, svg, html,
 // gulp.parallel -  запускает задачи ассинхронно (две задачи выполняются паралельно)
 
 gulp.task('dev', gulp.series('build', 'watch'));
+
+ghpages.publish('build', function(err) {});
