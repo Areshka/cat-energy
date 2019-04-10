@@ -6,7 +6,8 @@
   "scripts": {
     "clearCache": "gulp clearCache",
     "build": "gulp build",
-    "start": "gulp dev"
+    "start": "gulp dev",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "Oleg Moskalenko",
@@ -14,6 +15,7 @@
   "devDependencies": {
     "browser-sync": "^2.26.3",
     "del": "^3.0.0",
+    "gh-pages": "^2.0.1",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-cache": "^1.1.1",
