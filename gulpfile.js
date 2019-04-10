@@ -184,7 +184,7 @@ gulp.task('watch', watch);
 gulp.task('clean', clean);
 gulp.task('clearCache', clearCache);
 
-gulp.task('build', gulp.series(clean, copy, images, svg, html,
+gulp.task('build', gulp.series(clean, copy, images, webpImg, svg, html,
   gulp.parallel(styles, scripts)));
 // gulp.series -  запускает задачи последовательно
 // gulp.parallel -  запускает задачи ассинхронно (две задачи выполняются паралельно)
