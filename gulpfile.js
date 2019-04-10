@@ -19,7 +19,10 @@ var path = {
     src: 'src/img/**/*.{png,jpg,svg}',
     build: 'build/img/'
   },
-  webp: 'src/img/**/*.{png,jpg}',
+  webp: {
+    src: 'src/img/raster/*.{png,jpg}',
+    build: 'build/img/webp'
+  },
   svg: 'src/img/vector/sprite/*.svg',
   fonts: {
     src: 'src/fonts/**/*.*',
@@ -113,11 +116,11 @@ function images() {
 
 // создаем версии изображений в формате WebP
 function webpImg() {
-  return gulp.src(path.webp)
+  return gulp.src(path.webp.src)
     .pipe(webp({
       quality: 90
     }))
-    .pipe(gulp.dest(path.img.build));
+    .pipe(gulp.dest(path.webp.build));
 }
 
 function svg() {
@@ -184,7 +187,7 @@ gulp.task('watch', watch);
 gulp.task('clean', clean);
 gulp.task('clearCache', clearCache);
 
-gulp.task('build', gulp.series(clean, copy, images, webpImg, svg, html,
+gulp.task('build', gulp.series(clean, copy, webpImg, images, svg, html,
   gulp.parallel(styles, scripts)));
 // gulp.series -  запускает задачи последовательно
 // gulp.parallel -  запускает задачи ассинхронно (две задачи выполняются паралельно)
