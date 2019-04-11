@@ -81,6 +81,7 @@ function styles() {
 }
 
 const jsFiles = [
+  path.scripts.src + 'picturefill.js',
   path.scripts.src + 'main.js'
 ];
 
