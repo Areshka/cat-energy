@@ -16,7 +16,8 @@ body {
   font-family: "Arial", sans-serif;
   font-size: 14px;
   font-weight: normal;
-  color: #444444; }
+  color: #444444;
+  background-color: #ffffff; }
 
 h1, h2, h3, h4, h5, h6, p {
   margin: 0; }
@@ -148,7 +149,8 @@ picture img {
 @media (min-width: 1300px) {
   .pageHeader--index {
     position: relative;
-    min-height: 696px; }
+    min-height: 696px;
+    padding-bottom: 80px; }
     .pageHeader--index::after {
       content: "";
       position: absolute;
@@ -405,25 +407,23 @@ picture img {
     left: 90px; } }
 
 @media (min-width: 1300px) {
-  .jumbotron {
-    margin-bottom: 80px; }
-    .jumbotron__wrapper {
-      position: relative;
-      padding-top: 111px;
-      padding-left: 82px; }
-    .jumbotron__title, .jumbotron__slogan {
-      padding-left: 0; }
-    .jumbotron__slogan {
-      margin-bottom: 55px; }
-    .jumbotron__image {
-      position: absolute;
-      top: 25px;
-      left: 450px;
-      width: 552px;
-      height: 499px; }
-    .jumbotron__button {
-      position: static;
-      display: inline-block; } }
+  .jumbotron__wrapper {
+    position: relative;
+    padding-top: 111px;
+    padding-left: 82px; }
+  .jumbotron__title, .jumbotron__slogan {
+    padding-left: 0; }
+  .jumbotron__slogan {
+    margin-bottom: 55px; }
+  .jumbotron__image {
+    position: absolute;
+    top: 25px;
+    left: 450px;
+    width: 552px;
+    height: 499px; }
+  .jumbotron__button {
+    position: static;
+    display: inline-block; } }
 
 .categories {
   width: auto;
@@ -754,6 +754,7 @@ picture img {
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
     flex-grow: 1;
+    max-width: calc(100% - 60px);
     padding-right: 60px;
     font-size: 16px;
     line-height: 24px; } }
@@ -772,6 +773,7 @@ picture img {
     .advantages__item::after {
       right: 0; }
   .advantages__text {
+    max-width: 100%;
     padding-right: 0; } }
 
 .example {
@@ -1062,6 +1064,13 @@ picture img {
     height: 517px;
     margin-bottom: 15px; }
   .slider__image {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    flex-direction: column;
     width: 50%; }
     .slider__image img {
       max-width: 680px;
