@@ -88,6 +88,8 @@
   }
 
   .slider__image {
+      display: flex;
+      flex-direction: column;
       width: 50%;
 
     img {
@@ -189,6 +191,5 @@
     padding: 0;
     justify-content: space-between;
     align-items: center;
-
   }
 }
