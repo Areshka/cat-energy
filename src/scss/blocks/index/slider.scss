@@ -45,11 +45,11 @@
 .slider__label {
   position: relative;
   margin: 0 20px;
-  font-family: $fontOswald;
+  font-family: $base-font;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
-  color: $gray-1;
+  color: $gray-darken;
   cursor: pointer;
 }
 

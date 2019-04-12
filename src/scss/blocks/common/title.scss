@@ -1,9 +1,9 @@
 .title {
-  font-family: $fontOswald;
+  font-family: $base-font;
   font-size: 36px;
   line-height: 60px;
   font-weight: normal;
-  color: $gray-1;
+  color: $gray-darken;
 }
 
 @media #{unquote($tabletWidth)} {

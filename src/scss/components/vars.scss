@@ -2,17 +2,19 @@ $imgFolder: '../img/'; // путь к изображениям
 $fontsFolder: '../fonts/'; // путь к шрифтам
 
 $white: #ffffff;
-$colorText: #444444;
-$gray-1: #111111;
-$gray-2: #222222;
-$gray-light: #f2f2f2;
 $green: #68b738;
+$gray-light: #f2f2f2;
+$gray: #444444;
+$gray-dark: #222222;
+$gray-darken: #111111;
+
+$bgWhite: $white;
+$colorText: $gray;
+
 $borderColor: #ededed;
 $borderColorHover: #cdcdcd;
 $borderColorActive: #444444;
 $borderColorError: #ff8282;
-
-$bgWhite: $white;
 
 $mobileWidthsOnly: "(max-width: 767px)";
 $mobilePads: 20px;
@@ -22,5 +24,5 @@ $desktopWidth: "(min-width: 1300px)";
 $desktopPads: 40px;
 $retina: "(min-resolution: 144dpi), (min-resolution: 1.5dppx)";
 
-$fontOswald: 'Oswald', 'Arial', sans-serif;
-$fontArial: 'Arial', sans-serif;
+$base-font: 'Oswald', 'Arial', sans-serif;
+$secondary-font: 'Arial', sans-serif;

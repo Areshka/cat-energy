@@ -54,18 +54,18 @@
     margin-bottom: 25px;
     padding: 13px 0;
     padding-left: 71px;
-    font-family: $fontOswald;
+    font-family: $base-font;
     font-size: 24px;
     line-height: 24px;
     font-weight: normal;
     text-transform: uppercase;
-    color: $gray-1;
+    color: $gray-darken;
   }
 
   &__description {
     margin-bottom: 20px;
     padding-bottom: 24px;
-    font-family: $fontArial;
+    font-family: $secondary-font;
     font-size: 14px;
     line-height: 18px;
     border-bottom: 1px solid #d9d9d9;
@@ -76,12 +76,12 @@
     position: relative;
     display: flex;
     align-items: center;
-    font-family: $fontOswald;
+    font-family: $base-font;
     font-size: 16px;
     line-height: 16px;
     text-decoration: none;
     text-transform: uppercase;
-    color: $gray-1;
+    color: $gray-darken;
 
     &::before,
     &::after {
@@ -95,13 +95,13 @@
       margin-left: 12px;
       width: 19px;
       height: 3px;
-      background-color: $gray-2;
+      background-color: $gray-dark;
     }
 
     &::after {
       order: 2;
       border: 5.5px solid transparent;
-      border-left-color: $gray-2;
+      border-left-color: $gray-dark;
     }
 
     &:hover::before {

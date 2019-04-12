@@ -15,11 +15,11 @@
   margin-bottom: 34px;
   padding-left: 20px;
   padding-right: 24px;
-  font-family: $fontOswald;
+  font-family: $base-font;
   font-size: 24px;
   line-height: 1;
   font-weight: 400;
-  color: $gray-1;
+  color: $gray-darken;
   background: $bgWhite;
 
   &::before,
@@ -58,7 +58,7 @@
 
 .extraGoods__name {
   margin-bottom: 15px;
-  font-family: $fontOswald;
+  font-family: $base-font;
   font-size: 16px;
   line-height: 16px;
   font-weight: normal;
@@ -84,7 +84,7 @@
   min-height: 290px;
   margin-bottom: 35px;
   padding: 65px 60px 41px;
-  font-family: $fontArial;
+  font-family: $secondary-font;
   font-size: 16px;
   line-height: 20px;
   text-align: center;

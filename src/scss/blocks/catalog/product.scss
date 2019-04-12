@@ -25,17 +25,17 @@
 .product__title {
   margin-bottom: 12px;
   padding-right: 40px;
-  font-family: $fontOswald;
+  font-family: $base-font;
   font-size: 16px;
   font-weight: normal;
   line-height: 20px;
   text-transform: uppercase;
-  color: $gray-1;
+  color: $gray-darken;
 }
 
 .product__details {
   width: 100%;
-  font-family: $fontArial;
+  font-family: $secondary-font;
   font-size: 12px;
   line-height: 16px;
   color: $colorText;
@@ -51,7 +51,7 @@
 
 .productMore__title {
   margin-bottom: 9px;
-  font-family: $fontOswald;
+  font-family: $base-font;
   font-size: 16px;
   font-weight: normal;
   line-height: 20px;

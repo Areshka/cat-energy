@@ -70,7 +70,7 @@
 }
 
 .advantages__text {
-  font-family: $fontArial;
+  font-family: $secondary-font;
   font-size: 14px;
   line-height: 18px;
 }
@@ -120,7 +120,7 @@
       top: -25px;
       right: 90px;
       z-index: -1;
-      font-family: $fontOswald;
+      font-family: $base-font;
       font-size: 280px;
       line-height: 260px;
       color: $gray-light;
